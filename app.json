@@ -1,0 +1,24 @@
+{
+  "id": "db093499-15f9-47b3-96c3-8740e4c7daaa",
+  "name": "Purchase Requisition",
+  "publisher": "Rogers",
+  "brief": "",
+  "description": "",
+  "version": "1.0.0.4",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "17.0.0.0",
+  "application": "17.0.0.0",
+  "idRanges": [{
+    "from": 50000,
+    "to": 50149
+  }],
+  "runtime": "6.0",
+  "showMyCode": true,
+  "target": "OnPrem"
+}
