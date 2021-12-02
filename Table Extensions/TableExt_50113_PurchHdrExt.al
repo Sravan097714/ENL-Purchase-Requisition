@@ -2,6 +2,16 @@ tableextension 50113 PurchHdrExtPR extends "Purchase Header"
 {
     fields
     {
+        field(50050; "Released Date"; Date)
+        {
+            DataClassification = ToBeClassified;
+            Editable = false;
+        }
+        field(50051; "Approver Name"; Text[80])
+        {
+            DataClassification = ToBeClassified;
+            Editable = false;
+        }
         field(60000; "Request No."; Code[20])
         {
             DataClassification = CustomerContent;
@@ -35,24 +45,7 @@ tableextension 50113 PurchHdrExtPR extends "Purchase Header"
             Caption = 'PO Department Approver';
         }
         //End By Cedric Dominique - 04.06.2021
-        field(60005; Archive; Boolean)
-        {
-            FieldClass = Normal;
-            Caption = 'Archive';
-        }
-        /*
-         field(60010; "Archive Version No."; Integer)
-         {
-             DataClassification = ToBeClassified;
-         }
-         field(60011; "Last Restored Archive Version"; Integer)
-         {
-             DataClassification = ToBeClassified;
-         }
-         field(60012; Select; Integer)
-         {
-             DataClassification = ToBeClassified;
-         } */
+
     }
 }
 

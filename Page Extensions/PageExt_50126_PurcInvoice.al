@@ -38,6 +38,14 @@ pageextension 50126 "Purchase Invoice" extends "Purchase Invoice"
                 ApplicationArea = all;
                 ShowMandatory = NOT IsBlank;
             }
+            field("Released Date"; "Released Date")
+            {
+                ApplicationArea = all;
+            }
+            field("Approver Name"; "Approver Name")
+            {
+                ApplicationArea = all;
+            }
         }
     }
     var

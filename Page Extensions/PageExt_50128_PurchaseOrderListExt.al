@@ -25,6 +25,17 @@ pageextension 50128 PurchaseOrderList extends "Purchase Order List"
                 ApplicationArea = all;
             }
         }
+        addafter("Posting Date")
+        {
+            field("Released Date"; Rec."Released Date")
+            {
+                ApplicationArea = all;
+            }
+            field("Approver Name"; Rec."Approver Name")
+            {
+                ApplicationArea = all;
+            }
+        }
         modify("Location Code")
         {
             Visible = false;

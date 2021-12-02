@@ -283,4 +283,21 @@ codeunit 50020 "Purchase Requisition Mgmt"
         RequestQuote.Get(QuoteNo);
         RequestQuote.SelectedQuoteOnValidate();
     end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Release Purchase Document", 'OnCodeOnBeforeModifyHeader', '', true, true)]
+    local procedure "Release Purchase Document_OnCodeOnBeforeModifyHeader"
+    (
+        var PurchaseHeader: Record "Purchase Header";
+        var PurchaseLine: Record "Purchase Line";
+        PreviewMode: Boolean;
+        var LinesWereModified: Boolean
+    )
+    var
+        UserLRec: Record User;
+    begin
+        PurchaseHeader."Released Date" := WorkDate();
+        UserLRec.Get(UserSecurityId());
+        PurchaseHeader."Approver Name" := UserLRec."Full Name";
+    end;
+
 }

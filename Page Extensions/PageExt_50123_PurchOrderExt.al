@@ -23,6 +23,13 @@ pageextension 50123 PurchOrderExtPR extends "Purchase Order"
 
 
         }
+        addafter("Posting Description")
+        {
+            field("Approver Name"; Rec."Approver Name")
+            {
+                ApplicationArea = all;
+            }
+        }
         modify("Responsibility Center")
         {
             Visible = false;

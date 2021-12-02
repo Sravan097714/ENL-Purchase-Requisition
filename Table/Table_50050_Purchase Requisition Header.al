@@ -55,8 +55,14 @@ table 50050 "Purchase Requisition Header"
         }
         field(7; "Shortcut Dimension 2 Code"; Code[20])
         {
-            CaptionClass = 'Dimension 2';
+            /*
+            CaptionClass = '1,2,1';
             TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(2));
+            */
+            CaptionClass = '1,2,2';
+            Caption = 'Shortcut Dimension 2 Code';
+            TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(2),
+                                                          Blocked = CONST(false));
 
         }
         field(12; VendorInvNo; Code[35])
